@@ -27,7 +27,7 @@ namespace Assignment4
             {
 
                 FormsAuthentication.RedirectFromLoginPage(userName, true);
-
+                Response.Redirect("Instructor.aspx", false);
 
             }
             else
