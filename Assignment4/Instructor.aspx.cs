@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,13 +12,14 @@ namespace Assignment4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-          /*  if(Session.Count != 0)
-            {
-                foreach (var item in Session.Keys)
-                {
-                    Label1.Text = item.ToString() + "   " + Session[item.ToString()];
-                }
-            }*/
+              if(Session.Count != 0)
+              {
+                  foreach (var item in Session.Keys)
+                  {
+                      Label1.Text = item.ToString() + "   " + Session[item.ToString()];
+                  }
+              }
+
         }
     }
 }
