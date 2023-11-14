@@ -25,7 +25,8 @@ namespace Assignment4.authorized.Members
             }
 
             // Connection string
-            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\brand\\Desktop\\213Assignment4\\213Assignment4\\Assignment4\\App_Data\\KarateSchool.mdf;Integrated Security=True";
+            //string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\brand\\Desktop\\213Assignment4\\213Assignment4\\Assignment4\\App_Data\\KarateSchool.mdf;Integrated Security=True";
+            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\karina\\OneDrive - North Dakota University System\\Desktop\\Assignment4\\213Assignment4\\Assignment4\\App_Data\\KarateSchool.mdf;Integrated Security=True";
             KarateSchoolDataContext dbcon = new KarateSchoolDataContext(conn);
 
             // Select section name, start date, instructor's first and last name and fee for the section
