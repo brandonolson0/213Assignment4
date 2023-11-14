@@ -14,8 +14,7 @@
                     </asp:Login>
                 </p>
                 <p>
-                    <asp:Label ID="lblTest" runat="server" Text="Label"></asp:Label>
-                </p>
+                    &nbsp;</p>
             </section>
         </div>
     </main>
