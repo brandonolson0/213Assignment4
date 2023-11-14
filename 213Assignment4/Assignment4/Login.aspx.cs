@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Security;
+using System.Web.SessionState;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
@@ -12,7 +14,9 @@ namespace Assignment4
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Session.Clear();
+            Session.RemoveAll();
+            FormsAuthentication.SignOut();
         }
         protected void Login1_Authenticate(object sender, AuthenticateEventArgs e)
         {
@@ -21,8 +25,8 @@ namespace Assignment4
             string pass = Login1.Password;
 
             // connection string
-            //string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\brand\\Desktop\\213Assignment4\\213Assignment4\\Assignment4\\App_Data\\KarateSchool.mdf;Integrated Security=True";
-            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\karina\\OneDrive - North Dakota University System\\Desktop\\213\\213Assignment4\\Assignment4\\App_Data\\KarateSchool.mdf\";Integrated Security=True";
+            string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\brand\\Desktop\\213Assignment4\\213Assignment4\\Assignment4\\App_Data\\KarateSchool.mdf;Integrated Security=True";
+            //string conn = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\karina\\OneDrive - North Dakota University System\\Desktop\\213\\213Assignment4\\Assignment4\\App_Data\\KarateSchool.mdf\";Integrated Security=True";
             KarateSchoolDataContext dbcon = new KarateSchoolDataContext(conn);
 
             // search through the NetUsers db for a matching username
