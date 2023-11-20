@@ -55,10 +55,10 @@
             <tr>
                 <td style="width: 163px">User Type</td>
                 <td style="width: 254px">
-                    <asp:DropDownList ID="ddlUserType" runat="server" AutoPostBack="True">
+                    <asp:DropDownList ID="ddlUserType" runat="server">
                         <asp:ListItem Value="0">Instructor</asp:ListItem>
                         <asp:ListItem Value="1">Member</asp:ListItem>
-                        <asp:ListItem Value="2">Admin</asp:ListItem>
+                        <asp:ListItem Value="2">Administrator</asp:ListItem>
                     </asp:DropDownList>
                 </td>
                 <td>
@@ -120,11 +120,11 @@
             </tr>
             <tr>
                 <td style="width: 160px; height: 68px;">
-                    <asp:DropDownList ID="ddlMemberDelete" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Member_UserID" DataValueField="Member_UserID">
+                    <asp:DropDownList ID="ddlMemberDelete" runat="server" DataSourceID="SqlDataSource1" DataTextField="Member_UserID" DataValueField="Member_UserID">
                     </asp:DropDownList>
                 </td>
                 <td style="width: 254px; height: 68px;">
-                    <asp:DropDownList ID="ddlInstructorDelete" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource2" DataTextField="InstructorID" DataValueField="InstructorID">
+                    <asp:DropDownList ID="ddlInstructorDelete" runat="server" DataSourceID="SqlDataSource2" DataTextField="InstructorID" DataValueField="InstructorID">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:KarateSchoolConnectionString1 %>" SelectCommand="SELECT * FROM [Instructor]"></asp:SqlDataSource>
                 </td>
@@ -151,7 +151,7 @@
             <tr>
                 <td style="width: 158px">Member ID</td>
                 <td style="width: 256px">
-                    <asp:DropDownList ID="ddlMemberToAssign" runat="server" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="Member_UserID" DataValueField="Member_UserID">
+                    <asp:DropDownList ID="ddlMemberToAssign" runat="server" DataSourceID="SqlDataSource1" DataTextField="Member_UserID" DataValueField="Member_UserID">
                     </asp:DropDownList>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:KarateSchoolConnectionString1 %>" SelectCommand="SELECT * FROM [Member]"></asp:SqlDataSource>
                 </td>
@@ -162,7 +162,7 @@
             <tr>
                 <td style="width: 158px">Section</td>
                 <td style="width: 256px">
-                    <asp:DropDownList ID="ddlSection" runat="server" AutoPostBack="True">
+                    <asp:DropDownList ID="ddlSection" runat="server">
                         <asp:ListItem>Karate Age-Uke</asp:ListItem>
                         <asp:ListItem>Karate Chudan-Uke </asp:ListItem>
                     </asp:DropDownList>
